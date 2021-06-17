@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# この WEB アプリは店舗間の在庫共有アプリです。
 
-Things you may want to cover:
+# 店舗に不要な在庫を登録しておくことで欲しい店が名乗り出てくれるかも知れません。
 
-* Ruby version
+# 逆に欲しい商品を登録しておくことも可能です。（期限を設ける）
 
-* System dependencies
+# DB 設計
 
-* Configuration
+## stores テーブル
 
-* Database creation
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| number   | string | null: false |
+| password | string | null: false |
+| name     | string | null: false |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :posts
+- has_many :
 
-* Services (job queues, cache servers, search engines, etc.)
+## merchandises テーブル
 
-* Deployment instructions
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| JAN      | string | null: false |
+| name     | string | null: false |
+| quantity | string | null: false |
 
-* ...
+### Association
+
+## comment テーブル
